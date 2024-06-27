@@ -103,10 +103,11 @@ body {
   color: var(--text-eerie-black-2);
   font-size: 1.6rem;
   line-height: 1.5;
+  height: 300vh;
 }
 .container{padding-inline: 16px;}
 
-.navbar, .navbar .btn{
+.navbar .btn{
   display: none;
 }
 
@@ -119,9 +120,9 @@ body {
   z-index: 0;
 }
 
-.header-active{
+.header.active{
   background-color: var(--bg-white);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-1);
 }
 
 .header .container{
@@ -133,3 +134,34 @@ body {
 .nav-open-btn{
   font-size: 3.5rem;
 }
+.navbar{
+  position: absolute;
+  top: 85px;
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  max-height: 0;
+  overflow: hidden;
+  transform: var(--transition-2);
+}
+.navbar.active{
+  max-height: 310px;
+  visibility: visible;
+}
+.navbar-list{
+  padding-block-start: 15px;
+}
+.navbar-link,
+.card-btn .span
+{
+  font-weight: var(--weight-semiBold);
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+.card-btn{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 25px 20px;
+}
+
